@@ -22,9 +22,13 @@ export class HeaderComponent implements AfterViewInit {
         if (this.navList) {
           this.navList.nativeElement.classList.toggle('active');
         }
+        if (this.mobileMenu) {
+          this.mobileMenu.nativeElement.classList.toggle('active');
+          console.log("funciona")
+        }
         if (this.links) {
           this.links.nativeElement.classList.toggle('active');
-          console.log("funciona")
+          //console.log("funciona")
         }
       });
     }
