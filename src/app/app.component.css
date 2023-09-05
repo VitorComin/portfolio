@@ -1,6 +1,10 @@
 body {
-  background-image: url('../assets/fundoMontanhas.jpg');
-  background-size: cover;
+  /*background-image: url('../assets/fundoMontanhas.jpg');
+  background-size: cover;*/
   height: 90vh;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 

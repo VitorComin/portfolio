@@ -1,4 +1,5 @@
 section {
   height: 90vh;
-  background-color: lightblue;
+  background-image: url('../../../assets/fundoMontanhas.jpg');
+  background-size: cover;
 }
