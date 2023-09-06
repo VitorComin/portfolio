@@ -1,16 +1,16 @@
 <header>
   <nav>
-    <a class="title" href="#home">Vitor Comin</a>
+    <a class="title" href="#home" (click)="closeMenu()">Vitor Comin</a>
     <div class="mobile-menu" #mobileMenu>
       <div class="line1"></div>
       <div class="line2"></div>
       <div class="line3"></div>
     </div>
     <ul class="nav-list" #navList>
-      <li><a href="#home" class="links">Início</a></li>
-      <li><a href="#about" class="links">Sobre</a></li>
-      <li><a href="#experience" class="links">Experiências</a></li>
-      <li><a href="#projects" class="links">Projetos</a></li>
+      <li><a href="#home" class="links" (click)="closeMenu()">Início</a></li>
+      <li><a href="#about" class="links" (click)="closeMenu()">Sobre</a></li>
+      <li><a href="#experience" class="links" (click)="closeMenu()">Experiências</a></li>
+      <li><a href="#projects" class="links" (click)="closeMenu()">Projetos</a></li>
     </ul>
   </nav>
 </header>

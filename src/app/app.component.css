@@ -2,9 +2,18 @@ body {
   /*background-image: url('../assets/fundoMontanhas.jpg');
   background-size: cover;*/
   height: 90vh;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  z-index: 1;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
+
+app-header {
+  z-index: 100;
+}
+
 

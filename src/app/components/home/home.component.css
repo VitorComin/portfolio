@@ -2,4 +2,54 @@ section {
   height: 90vh;
   background-image: url('../../../assets/fundoMontanhas.jpg');
   background-size: cover;
+  scroll-snap-align: start;
+  z-index: 0
+}
+
+.container {
+  position: relative;
+  top: 25vh;
+  left: 20vh;
+  z-index: 0;
+
+}
+
+h1 {
+  font-family: 'Rubik', sans-serif;
+  padding-top: 20px;
+  font-size: 35px;
+  margin: 0;
+}
+
+h2 {
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 50px;
+  padding-top: 20px;
+}
+
+.apresentacao {
+  display: flex;
+  align-items: center;
+}
+
+.barra {
+  animation: aparecer;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 999px) {
+  .container {
+    width: 50vh;
+  }
 }

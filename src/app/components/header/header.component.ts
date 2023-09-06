@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ export class HeaderComponent implements AfterViewInit {
   @ViewChild('navList') navList: ElementRef | undefined;
   @ViewChild('links') links: ElementRef | undefined;
 
-  constructor() {}
+  constructor(private sharedService: SharedService) {} // Injete o SharedService
 
   ngAfterViewInit() {
     this.initMobileNavbar();
@@ -21,6 +22,7 @@ export class HeaderComponent implements AfterViewInit {
       this.mobileMenu.nativeElement.addEventListener('click', () => {
         if (this.navList) {
           this.navList.nativeElement.classList.toggle('active');
+          this.sharedService.toggleNavState(); // Chame a função do serviço para alternar o estado
         }
         if (this.mobileMenu) {
           this.mobileMenu.nativeElement.classList.toggle('active');
@@ -32,5 +34,15 @@ export class HeaderComponent implements AfterViewInit {
         }
       });
     }
+  }
+
+  closeMenu() {
+    if (this.navList) {
+      this.navList.nativeElement.classList.remove('active');
+    }
+    if (this.mobileMenu) {
+      this.mobileMenu.nativeElement.classList.remove('active');
+    }
+    this.sharedService.isNavActive = false;
   }
 }
