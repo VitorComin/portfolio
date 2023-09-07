@@ -11,7 +11,7 @@ export class HeaderComponent implements AfterViewInit {
   @ViewChild('navList') navList: ElementRef | undefined;
   @ViewChild('links') links: ElementRef | undefined;
 
-  constructor(private sharedService: SharedService) {} // Injete o SharedService
+  constructor(private sharedService: SharedService) {}
 
   ngAfterViewInit() {
     this.initMobileNavbar();
@@ -22,7 +22,7 @@ export class HeaderComponent implements AfterViewInit {
       this.mobileMenu.nativeElement.addEventListener('click', () => {
         if (this.navList) {
           this.navList.nativeElement.classList.toggle('active');
-          this.sharedService.toggleNavState(); // Chame a função do serviço para alternar o estado
+          this.sharedService.toggleNavState();
         }
         if (this.mobileMenu) {
           this.mobileMenu.nativeElement.classList.toggle('active');
